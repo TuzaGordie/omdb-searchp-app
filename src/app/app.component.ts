@@ -29,6 +29,7 @@ export class AppComponent {
       (data: any) => {
         console.log('response', data);
         this.Results = data.Search;
+        this.connecting.creating = false;
       });
   }
 
