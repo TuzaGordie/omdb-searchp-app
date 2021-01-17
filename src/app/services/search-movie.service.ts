@@ -64,7 +64,7 @@ export class SearchMovieService {
 
   // tslint:disable-next-line:typedef
   searchMovieTitle(title: string) {
-    const url = 'http://www.omdbapi.com/?s=' + title + '&apikey=dce66809';
+    const url = 'https://www.omdbapi.com/?s=' + title + '&apikey=dce66809';
     return this.http.get<HttpResponse<any>>(url, {observe: 'response'}).pipe(map((res: any) => res.body));
   }
 
