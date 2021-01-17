@@ -21,16 +21,20 @@ export class AppComponent {
     creating: false
   };
 
-  searchMovie(title: string): void {
+  // tslint:disable-next-line:typedef
+  searchMovie(title: string) {
 
     this.connecting.creating = true;
 
-    this.searchService.searchMovieTitle(title).subscribe(
-      (data: any) => {
-        console.log('response', data);
-        this.Results = data.Search;
-        this.connecting.creating = false;
-      });
+    if (this.title !== '') {
+      this.searchService.searchMovieTitle(title).subscribe(
+        (data: any) => {
+          console.log('response', data);
+          this.Results = data.Search;
+          this.connecting.creating = false;
+        });
+    }
+
   }
 
   nominate(movie: any): void {
