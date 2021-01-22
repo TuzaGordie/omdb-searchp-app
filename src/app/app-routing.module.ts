@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './home/home.component';
 import {NominationsComponent} from './nominations/nominations.component';
+import {NominationsPageComponent} from './nominations-page/nominations-page.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,15 @@ const routes: Routes = [
     redirectTo: 'n'
   },
   {
-    path: 'n',
-    component: NominationsComponent
+    path: '',
+    component: HomeComponent,
+    children: [
+      {path: 'n', component: NominationsComponent}
+    ]
+  },
+  {
+    path: 'nominations',
+    component: NominationsPageComponent
   }
 ];
 

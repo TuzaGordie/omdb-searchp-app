@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card my-3" *ngIf="movies">
+    <div class="card-header" style="background-color: #f5c518">
+      <strong>NOMINATIONS</strong>
+    </div>
+    <ul class="list-group list-group-flush" *ngFor="let movie of movies">
+      <li class="list-group-item" *ngIf="movie">
+        {{movie.Title}}
+        <span class="float-right text-danger"><fa-icon [icon]="faTrash" (click)="delete(movie)"></fa-icon></span>
+      </li>
+    </ul>
+    <span class="no-movie" *ngIf="movies == 0">You haven't Nominated any movie</span>
+  </div>
+
+</div>

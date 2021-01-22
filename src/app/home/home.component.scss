@@ -33,4 +33,16 @@ input[type="text"] {
 .flex {
   display: flex;
   justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nominations-button {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  .nominations-button {
+    display: block;
+  }
 }

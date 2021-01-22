@@ -11,6 +11,7 @@ import { NominationsComponent } from './nominations/nominations.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NominationsPageComponent } from './nominations-page/nominations-page.component';
 
 
 
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     AppComponent,
     HomeComponent,
-    NominationsComponent
+    NominationsComponent,
+    NominationsPageComponent
   ],
     imports: [
         BrowserModule,
